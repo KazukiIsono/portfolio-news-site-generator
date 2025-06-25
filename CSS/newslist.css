@@ -1,0 +1,78 @@
+.news-item a:hover .news-title {
+  color: #d1a802;
+}
+
+
+body {
+  background-color: #ffffff;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* タイトル見出し */
+main h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #054283;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin: 0 auto;
+}
+
+/* NEWSリスト全体 */
+.news-list {
+  list-style: none;
+  padding: 30px;
+  margin: 100px;
+}
+
+/* 各NEWS項目（シンプル左寄せ） */
+.news-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+/* リンク全体に適用 */
+.news-item a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+/* NEWS項目の中身を横並びにする */
+.news-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 日付とタイトルの間のスペース */
+}
+
+/* 日付 */
+.news-date {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap; /* 改行させない */
+  flex-shrink: 0;       /* 縮まないように固定 */
+  width: 100px;         /* 日付部分の幅 */
+}
+
+.news-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #444444;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.newslist-page {
+  align-items: flex-start !important; /* 左に詰める */
+  text-align: left !important;        /* テキストも左揃え */
+  width: 100%;                        /* 横幅いっぱい使う */
+  max-width: none;                    /* 横幅制限解除 */
+  padding: 0 60px 80px 60px;          /* 左右の余白だけ最小限 */
+  box-sizing: border-box;            /* パディング含めて幅を調整 */
+}

@@ -1,0 +1,8 @@
+# 秘密鍵
+credentials.json
+
+# Pythonキャッシュ
+__pycache__/
+
+# 出力先フォルダ
+dist/

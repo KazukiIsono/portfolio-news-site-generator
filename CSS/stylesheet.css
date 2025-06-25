@@ -1,0 +1,299 @@
+/* ============ グローバルリンクスタイル ============ */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+a {
+  color: #000000; 
+  text-decoration: none; /* 下線を削除 */
+}
+a:hover {
+  color: #d1a802; /* ホバー時に黄色に変更 */
+}
+p {
+  font-size: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+h1 {
+  font-size: 270%;
+  font-family: 'MS Pゴシック';
+  border-bottom: 3px solid #054283; 
+  padding-bottom: 5px;              /* 下線と文字の間に余白を */
+  display: inline-block;            /* 下線が文字の幅に合わせて表示される */
+}
+h2 {
+  font-size: 200%;
+  font-family: 'MS Pゴシック';
+}
+/* 全体の背景色 */
+body {
+  background-color: #f4f3f3; /* 薄いグレー */
+  margin: 0; /* 余白を削除 */
+  padding: 0;
+}
+
+
+
+/* ============ リスト（ul）のリセット ============ */
+ul {
+  margin: 0; /* リストの余白を削除 */
+  padding: 0; /* リストの内側の余白を削除 */
+}
+
+
+
+/* ============ ヘッダーのスタイル ============ */
+header {
+  background-color: #ffffff; 
+  color: #000000; 
+  width: 100%; /* ヘッダーを画面全幅に */
+  height: 100px; /* 高さを固定 */
+  box-sizing: border-box; /* パディングを含めた幅計算 */
+  display: flex; /* 子要素を横並びに */
+  justify-content: space-between; /* 子要素を左右に配置 */
+  align-items: center; /* 子要素を上下中央に配置 */
+  border: 1px solid #ccc;
+}
+/* ヘッダー内のナビゲーションスタイル */
+nav {
+  width: 50%; /* ナビゲーション部分の幅を設定 */
+}
+nav ul {
+  display: flex; /* リストを横並びに */
+  list-style-type: none; /* リストポイントを削除 */
+  justify-content: space-around; /* 項目を均等に配置 */
+  padding: 0; /*左側の余白を削除*/
+  margin: 0; /*上下の余白を削除*/
+}
+nav ul li {
+  padding: 0 10px;
+  position: relative;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+/* 縦線（区切り線）を追加 */
+nav ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%; /* 縦線の長さ（上下に余白） */
+  width: 1px;
+  background-color: #8e8e8e; /* 線の色を調整可能 */
+}
+
+
+
+/* ================スライド写真======================= */
+.slider {
+  height: 500px; 
+  overflow: hidden; /* スライドがコンテナをはみ出さないようにします */
+}
+.slider img {
+  height: 100%; /* コンテナの高さに合わせます */
+  width: auto; /* 画像の縦横比を維持します */
+  object-fit: cover; /* 画像がコンテナに収まるように調整します */
+}
+
+
+
+/* ================main部分全体を中央に配置======================= */
+main {
+  background-color: #ffffff; 
+  padding: 0px; /* 内側に余白を追加 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+  max-width: 1400px; /* 横幅を制限 */
+  margin: 20px auto; /* 上下に余白を追加し、中央揃え */
+  border-radius: 8px; /* 角を丸く */
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: column; /* コンテンツを縦並びに */
+  justify-content: center; /* 縦方向で中央に配置 */
+  align-items: center; /* 横方向で中央に配置 */
+  text-align: center; /* テキストを中央揃え */
+}
+/* 画像のスタイル（必要に応じて追加） */
+main img {
+  max-width: 100%; 
+  height: auto; /* アスペクト比を維持 */
+  margin-bottom: 20px; /* 画像下に余白を追加 */
+}
+
+
+
+/* ==================紹介セクション==================== */
+.about-section {
+  background: radial-gradient(circle, #ddedff, #ebebeb); /* 薄いグラデ背景 */
+  padding: 60px 0px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #222;
+}
+.about-container {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 60px;
+  align-items: flex-start;
+  text-align: left;
+}
+.about-label {
+  flex: 0 0 140px;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.about-label img {
+  width: 80px;
+  display: block;
+  margin-bottom: 8px;
+}
+.about-content {
+  flex: 1;
+}
+.about-title {
+  font-size: 2.8rem;
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+.about-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #000;
+  transition: all 0.3s ease;
+}
+.about-link .arrow {
+  margin-left: 5px;
+}
+.about-link:hover {
+  opacity: 0.7;
+}
+.about-sns ul {
+  list-style: none; /* リストのポイントを消す */
+  margin: 0;
+  padding: 0;
+  display: flex; /* 横並びに */
+  gap: 15px; /* アイコン間にスペースを設定 */
+}
+.about-sns ul li a i {
+  color: #050505; /* アイコンの色を黒に設定 */
+  font-size: 50px; /* アイコンのサイズを調整 */
+  transition: color 0.3s ease; /* 色変更をスムーズに */
+}
+.about-sns ul li a i:hover {
+  color: #ffcc00; /* ホバー時に黄色に変更 */
+}
+
+
+
+/* ==================メンバーセクション==================== */
+.member-section {
+  padding: 120px 0;
+}
+.member-container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.member-row {
+  display: flex;
+  justify-content: space-between;
+}
+.member-col {
+  width: 23%;
+  text-align: center;
+}
+.member-box {
+  border-radius: 100%;
+  width: 173px;
+  height: 173px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+}
+.member-icon {
+  width: 80px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #054283;
+  margin-bottom: 10px;
+}
+.text {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: left;
+  line-height: 1.5;
+  color: #474747
+}
+
+
+/* ============ フッターのスタイル ============ */
+footer {
+  background-color: #333; /* フッターの背景色を濃いグレーに */
+  color: #fff; /* 文字色を白に設定 */
+  padding: 20px 0; /* 上下に余白を追加 */
+  text-align: center; /* コンテンツを中央揃え */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* フッターの上に軽い影を追加 */
+}
+/* フッターコンテナ */
+.footer-container {
+  max-width: 1200px; /* フッターの幅を制限 */
+  margin: 0 auto; /* 中央に配置 */
+  display: flex; /* 横並びに */
+  justify-content: space-between; /* コンテンツを左右に分ける */
+  align-items: center; /* コンテンツを上下中央に配置 */
+  flex-wrap: wrap; /* 小さい画面で折り返し */
+  gap: 20px; /* 各コンテンツ間の余白 */
+}
+/* フッターナビゲーション */
+.footer-nav ul {
+  list-style: none; /* リストのポイントを消す */
+  margin: 0;
+  padding: 0;
+  display: flex; /* 横並びに */
+  gap: 15px; /* 各リンク間にスペースを設定 */
+}
+.footer-nav ul li a {
+  color: #fff; /* リンクの文字色を白に設定 */
+  text-decoration: none; /* 下線を消す */
+  font-size: 14px; /* フォントサイズを設定 */
+  transition: color 0.3s ease; /* 色変更をスムーズに */
+}
+.footer-nav ul li a:hover {
+  color: #ffcc00; /* ホバー時に黄色に変更 */
+}
+/* フッターのSNSリンク */
+.footer-sns ul {
+  list-style: none; /* リストのポイントを消す */
+  margin: 0;
+  padding: 0;
+  display: flex; /* 横並びに */
+  gap: 15px; /* アイコン間にスペースを設定 */
+}
+.footer-sns ul li a i {
+  color: #fff; /* アイコンの色を白に設定 */
+  font-size: 20px; /* アイコンのサイズを調整 */
+  transition: color 0.3s ease; /* 色変更をスムーズに */
+}
+.footer-sns ul li a i:hover {
+  color: #ffcc00; /* ホバー時に黄色に変更 */
+}
+/* コピーライト部分 */
+.footer-copy {
+  font-size: 15px; 
+  color: #aaa;
+  margin-top: 10px; /* 上に余白を追加 */
+  flex: 1 0 100%; /* 幅を全体に広げる */
+}
